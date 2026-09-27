@@ -48,11 +48,6 @@ export function getGameDetails(id: string | number) {
 }
 
 export async function getGameCoverUrl(id: string | number) {
-  const gameDetail = await getGameDetails(id)
-  const detail = gameDetail[id.toString()]
-  if (!detail?.success || !detail.data?.header_image) {
-    console.warn(`Failed to get cover for appid ${id}`)
-    return null
-  }
-  return detail.data.header_image
+  return `https://cdn.cloudflare.steamstatic.com/steam/apps/${id}/header.jpg`
+}
 }
