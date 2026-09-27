@@ -50,4 +50,3 @@ export function getGameDetails(id: string | number) {
 export async function getGameCoverUrl(id: string | number) {
   return `https://cdn.cloudflare.steamstatic.com/steam/apps/${id}/header.jpg`
 }
-}
